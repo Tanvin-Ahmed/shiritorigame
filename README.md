@@ -1,55 +1,19 @@
-# React + TypeScript + Vite
+# Shiritori game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simplified version of shiritori game. Where 2 payers can play game in same screen. Time duration is 12 seconds. 1st player can give any valid 4 characters word for the 1st time to start the game. Next player should be write the word with last character of oposite player.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Can play 2 player from same screen
+- Validate word using dictionary api
+- Validate word's first letter with oposit player word's last letter.
+- When player write correct word then he will get 1 point. If write wrong word he get -1 point. If timer end and word is invalid or wrong then player get -1 point.
+- Hosting in netlify.
 
-## Expanding the ESLint configuration
+## Technologies used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- TypeScript
+- React (vit)
+- Tailwind CSS
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-# shiritorigame
+[Live link](https://gleaming-lollipop-70a8df.netlify.app)
